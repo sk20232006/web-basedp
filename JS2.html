@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SafeKit - First Aid Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #F5E8DC;">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <div id="header">
+        <h1>SafeKit</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="stories.html">Success Stories</a></li>
+                <li><a href="library.html">Resource Library</a></li>
+                <li><a href="form.html">Health Check</a></li>
+                <li><a href="JS2.html">Test</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="footer" class="mt-4 text-center">
+        <p>Copyright &copy; 2024 SafeKit. All Rights Reserved.</p>
+    </div>
+
+    <div class="container-fluid">
+        <div id="d1"
+            style="color: #003d3d; text-align: right; margin-top: 10px; margin-right: 7px; margin-bottom: 0px; padding-bottom: 2px;">
+        </div>
+        <form id="healthForm" onsubmit="return calculateHealthScore();">
+            <p style="margin-top: 0px; margin-bottom: 5px;">Client name:
+                
+                <span id="clock" style="color: #003d3d; text-align: right; margin-right:7px ; float: right;"></span>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="firstname" class="form-label" style="font-size: small; color: #808080">First Name</label>
+                        <input type="text" id="firstname" class="form-control" style="color: #003d3d;">
+                        <span id="nameError" style="color: red; font-size: small;"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastname" class="form-label" style="font-size: small; color: #808080">Last Name</label>
+                        <input type="text" id="lastname" class="form-control" style="color: #003d3d">
+                        <span id="nameError" style="color: red; font-size: small;"></span> 
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="age" class="form-label">Client age: </label>
+                        <input type="number" id="age" class="form-control">
+                        <span id="ageError" style="color: red; font-size: small;"></span> 
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Client E-mail:</label>
+                        <input type="email" id="email1" name="email1" class="form-control" style="margin-top: 0px;">
+                        <span id="emailError" style="color: red; font-size: small;"></span>
+                    </div>
+                </div>                
+    <br>
+    <div style="border-top: 4px solid #5C0011; padding-top: 10px;">
+        <div class="container-fluid">
+
+            <h5>Hello! Welcome to Safe-Kits exam. Please answer the questions below to see if you're ready for
+                emergencies.</h5><br>
+
+            <p
+                style="margin-left: 20px; margin-right: 20px;padding-left:5px; border-style: dashed; border-width: 2px; border-color: #5C0011;">
+                Q1. What is the first step when cleaning wounds? <span
+                    style="color: red; font-size: small;">*Required</span><br>
+                <input type="radio" id="wash" name="q1" value="wash"> Wash your hands to avoid infection<br>
+                <input type="radio" id="cover" name="q1" value="cover"> Cover the wound<br>
+                <input type="radio" id="help" name="q1" value="help"> Seek medical help<br>
+                <input type="radio" id="stop" name="q1" value="stop"> Stop bleeding by applying firm pressure
+                <span id="q1Error" class="question-error" style="color: red;"></span>
+            </p>
+
+            <p
+                style="margin-left: 20px; margin-right: 20px;padding-left:5px; border-style: dashed; border-width: 2px; border-color: #5C0011;">
+                Q2. For minor burns we should: <span style="color: red; font-size: small;">*Required</span><br>
+                <input type="radio" id="ice" name="q2" value="ice"> Cool with ice-cold water<br>
+                <input type="radio" id="consult" name="q2" value="consult"> Consult a doctor<br>
+                <input type="radio" id="pop" name="q2" value="pop"> Pop blisters<br>
+                <input type="radio" id="cool" name="q2" value="cool"> Cool with running cool water
+                <span id="q2Error" class="question-error" style="color: red;"></span>
+            </p>
+
+            <p
+                style="margin-left: 20px; margin-right: 20px;padding-left:5px; border-style: dashed; border-width: 2px; border-color: #5C0011;">
+                Q3. What is used to help infants if they are choking? <span
+                    style="color: red; font-size: small;">*Required</span><br>
+                <input type="radio" id="perform" name="q3" value="perform"> Perform the Heimlich maneuver<br>
+                <input type="radio" id="bbct" name="q3" value="bbct"> Administer back blows and chest thrusts<br>
+                <input type="radio" id="cough" name="q3" value="cough"> Encourage coughing<br>
+                <input type="radio" id="at" name="q3" value="at"> Administer abdominal thrusts
+                <span id="q3Error" class="question-error" style="color: red;"></span>
+            </p>
+
+            <p
+                style="margin-left: 20px; margin-right: 20px;padding-left:5px; border-style: dashed; border-width: 2px; border-color: #5C0011;">
+                Q4. What is the first step when dealing with Nosebleeds? <span
+                    style="color: red; font-size: small;">*Required</span><br>
+                <input type="radio" id="pinch" name="q4" value="pinch"> Pinch the soft part of the nose <br>
+                <input type="radio" id="sit" name="q4" value="sit"> Sit upright<br>
+                <input type="radio" id="seek" name="q4" value="seek"> Seek medical help<br>
+                <input type="radio" id="avoid" name="q4" value="avoid"> Avoid blowing the nose
+                <span id="q4Error" class="question-error" style="color: red;"></span>
+            </p>
+
+            <p
+                style="margin-left: 20px; margin-right: 20px; padding-left:5px; border-style: dashed; border-width: 2px; border-color: #5C0011;">
+                Q5. What should you not do when dealing with sprains? <span
+                    style="color: red; font-size: small;">*Required</span><br>
+                <input type="radio" id="rest" name="q5" value="rest"> Rest<br>
+                <input type="radio" id="api" name="q5" value="api"> Apply ice<br>
+                <input type="radio" id="move" name="q5" value="move"> Move the sprained area<br>
+                <input type="radio" id="use" name="q5" value="use"> Use an elastic bandage to reduce swelling
+                <span id="q5Error" class="question-error" style="color: red;"></span>
+            </p>
+
+            <p
+                style="margin-left: 20px; margin-right: 20px;padding-left:5px; border-style: dashed; border-width: 2px; border-color: #5C0011;">
+                Q6. How do you deal with poisoning <span style="color: red; font-size: small;">*Required</span><br>
+                <input type="radio" id="identify" name="q6" value="identify"> Identify the poison and avoid induce
+                vomiting<br>
+                <input type="radio" id="calle" name="q6" value="calle"> Call emergency services<br>
+                <input type="radio" id="unc" name="q6" value="unc"> If the person is unconscious check for breathing<br>
+                <input type="radio" id="all" name="q6" value="all"> All of the above
+                <span id="q6Error" class="question-error" style="color: red;"></span>
+            </p>
+
+            <p
+                style="margin-left: 20px; margin-right: 20px; padding-left:5px; border-style: dashed; border-width: 2px; border-color: #5C0011;">
+                Q7. What should you avoid doing when dealing with heart attacks? <span
+                    style="color: red; font-size: small;">*Required</span><br>
+                <input type="radio" id="sit" name="q7" value="sit"> Have the person sit and stay calm<br>
+                <input type="radio" id="ces" name="q7" value="ces"> Call emergency services immediately<br>
+                <input type="radio" id="givea" name="q7" value="givea"> Give aspirin<br>
+                <input type="radio" id="ignore" name="q7" value="ignore"> Ignore symptoms
+                <span id="q7Error" class="question-error" style="color: red;"></span>
+            </p>
+
+            <p
+                style="margin-left: 20px; margin-right: 20px; padding-left:5px; border-style: dashed; border-width: 2px; border-color: #5C0011;">
+                Q8. How should you deal with migraines? <span style="color: red; font-size: small;">*Required</span><br>
+                <input type="radio" id="light" name="q8" value="light"> Stay in the light<br>
+                <input type="radio" id="hyd" name="q8" value="hyd"> Avoid hydrating<br>
+                <input type="radio" id="acc" name="q8" value="acc"> Apply a cold compress<br>
+                <input type="radio" id="pk" name="q8" value="pk"> Do not take pain-killers
+                <span id="q8Error" class="question-error" style="color: red;"></span>
+            </p>
+
+        </div>
+        <button style="background-color: #5C0011; color: beige; margin-left: 10px; margin-top: 20px;" type="submit"
+            class="btn btn-primary">Submit</button>
+    </div>
+    
+    </form>
+        <div class="container-fluid mt-4">
+            <div id="clientInfoContainer" class="border border-primary rounded p-3">
+                <h4>Client Information</h4>
+                <p id="clientInfo"></p>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-4">
+            <div id="scoreContainer" class="border border-primary rounded p-3">
+                <h4>Your Health Score</h4>
+                <p id="healthScore"></p>
+                <p id="scoreFeedback"></p>
+            </div>
+        </div>
+<br><br><br>
+        <div id="footer" class="mt-4 text-center">
+            <p>Copyright &copy; 2024 SafeKit. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+         var d = new Date();
+        document.getElementById("d1").innerHTML =
+            d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() + "<br>";
+        var myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+            t = new Date();
+            document.getElementById("clock").innerHTML = t.toLocaleTimeString();
+        }
+      function calculateHealthScore() {
+        var questions = [
+            "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"
+        ];
+
+        var answers = [
+            "wash", "cool", "bbct", "sit", "move", "all", "ignore", "acc"
+        ];
+
+        var score = 0;
+        document.getElementById("nameError").textContent = '';
+        document.getElementById("ageError").textContent = '';
+        document.getElementById("emailError").textContent = '';
+
+        for (var i = 0; i < questions.length; i++) {
+            document.getElementById(questions[i] + "Error").textContent = '';
+        }
+
+        var isValid = true;
+
+        var firstName = document.getElementById("firstname").value;
+        var lastName = document.getElementById("lastname").value;
+        var age = document.getElementById("age").value;
+        var email = document.getElementById("email1").value;
+
+        if (firstName === "" || lastName === "") {
+            document.getElementById("nameError").textContent = "Please fill in both the first and last names.";
+            isValid = false;
+        }
+        if (age === "") {
+            document.getElementById("ageError").textContent = "Please fill in the age.";
+            isValid = false;
+        }
+        if (email === "") {
+            document.getElementById("emailError").textContent = "Please fill in the email.";
+            isValid = false;
+        }
+        for (var i = 0; i < questions.length; i++) {
+            var question = questions[i];
+            var inputs = document.getElementsByName(question);
+            var isAnswered = false;
+
+            for (var j = 0; j < inputs.length; j++) {
+                if (inputs[j].checked) {
+                    isAnswered = true;
+                    break;
+                }
+            }
+            if (!isAnswered) {
+                document.getElementById(question + "Error").textContent = "Please answer this question.";
+                isValid = false;
+            }
+        }
+        if (age < 18) {
+            document.getElementById("ageError").innerHTML = " You must be at least 18 years old.";
+            return false;
+        }
+
+        for (var i = 0; i < questions.length; i++) {
+            var question = questions[i];
+            var answer = answers[i];
+            var selectedInput = document.querySelector(`input[name="${question}"]:checked`);
+
+            if (selectedInput && selectedInput.value === answer) {
+                score += 2;
+            }
+        }
+
+        document.getElementById("clientInfo").innerText = 
+            "Client: " + firstName + " " + lastName + "\nAge: " + age + "\nEmail: " + email;
+
+        document.getElementById("healthScore").innerText = "Your test score is: " + score;
+
+        var feedback;
+        if (score >= 12) {
+            feedback = "Great job!";
+        } else if (score >= 8) {
+            feedback = "Your score is average. Consider making small improvements.";
+        } else {
+            feedback = "Your score is low. Consider re-learning some techniques.";
+        }
+
+        document.getElementById("scoreFeedback").innerText = feedback;
+        return false;
+    }
+</script>
+</body>
+
+</html>

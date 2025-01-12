@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+    a:link{
+        color: #5C0011;
+       }
+    a:visited{
+        color: #5C0011;
+       }
+    a:hover{
+        color: #399d9d ;
+       }
+    a:active{
+        color:#ff0000;
+       }
+    table {
+        color: #003d3d;
+        width: 500px;
+        }
+    table, th, td {
+        border: 2px groove #3a0008; 
+        }
+    th {
+        text-align: left; 
+        padding-left: 15px;
+        padding-right: 20px;
+        width: 10%;
+        }
+    td {
+        padding: 4px 10px;
+        text-align: center;
+        }
+    h4.p2 {
+        font-size: 18px;
+        color:#8A4E1E;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+   
+    </style>
+    
+    <title>SafeKit - First Aid Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <div id="header">
+        <h1>SafeKit</h1>
+        <nav>
+            <ul>
+                <div id="d1" style="text-align: right; margin-top: 0px;"></div>
+                
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="stories.html">Success Stories</a></li>
+                <li><a href="library.html">Resource Library</a></li>
+                <li><a href="JS2.html">Test</a></li>
+                <li id="clock" style="text-align: right; margin-right:0px ; float: right;"></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container-fluid">
+    <p class="b5"><strong>Contact us</strong></p>
+    <p class="b1" style="text-align: center;">We’re here to assist you! Whether you have a question, need support, or want to collaborate, feel free to reach out to the right person below.</p>
+    <h3 class="b7">General Inquiries</h3>  
+    <p class="b8">If you’re unsure who to contact, email us at <a href="mailto:suzan.khaldoun12@gmail.com">Safe.kit@gmail.com</a>, and we’ll connect you to the right person.</p>
+    <ul style="font-family: Georgia, 'Times New Roman', Times, serif;">
+        <h4 class="p2">Contact 1: Jumana Juma</h4>       
+        <table>
+            <tr>
+                <th>E-mail</th>
+                <td><a href= mailto:jumanajuma92@gmail.com>jumanajuma92@gmail.com</a></td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>+962778660735</td>
+            </tr>
+            <tr>
+                <th>Instagram</th>
+                <td><a href="https://www.instagram.com/ineedhelpfr_fr/?__pwa=1"> jumanajuma92</a></td>
+            </tr>
+        </table>
+        <h4 class="p2">Contact 2: Suzan Khaldoun</h4>
+        <table>
+            <tr>
+                <th>E-mail</th>
+                <td><a href= "mailto:suzan.khaldoun12@gmail.com">Suzan.Khaldoun12@gmail.com</a></td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>+962791429511</td>
+            </tr>
+            <tr>
+                <th>Instagram</th>
+                <td><a href="https://www.instagram.com/suzankhaldoun/?__pwa=1">suzankhaldoun</a></td>
+            </tr>
+        </table>
+    </ul>
+    <p class="b10">We’re available Sunday to Thursday, 9 AM - 5 PM (GMT).</p>
+    <p class="b9">We appreciate your interest and look forward to assisting you. Your message is important to us, and we’ll do our best to respond promptly. If your inquiry is urgent, please feel free to reach us via phone or our social media channels.</p>
+</div>
+    <div id="footer">
+        <p>© 2025 SafeKit. All Rights Reserved.</p>
+    </div>
+
+    <script>var d = new Date();
+        document.getElementById("d1").innerHTML =
+            d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() + "<br>";
+        var myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+            t = new Date();
+            document.getElementById("clock").innerHTML = t.toLocaleTimeString();
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

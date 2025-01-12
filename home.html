@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+    a:link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+ }
+
+    a:visited{
+    color: beige ;
+ }
+
+    a:hover{
+    color: #b87333 ;
+ }
+
+    a:active{
+    color:#FFD6E0;
+ }
+
+    </style>
+  
+    <title>SafeKit - First Aid Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #F5E8DC;">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <div id="header">
+        <h1>SafeKit</h1>
+        
+        
+        <nav>
+            <ul>
+                
+                <div id="d1" style="text-align: right; margin-top: 0px;"></div>
+                
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="stories.html">Success Stories</a></li>
+                <li><a href="library.html">Resource Library</a></li>
+                <li><a href="JS2.html">Test</a></li>
+                <li id="clock" style="text-align: right; margin-right:0px ; float: right;"></li>
+            </ul>
+    </div>
+
+    
+    <div class="container-fluid">
+    <p class="hp">Be prepared for life's unexpected challenges with our all-in-one safekit course, designed to guide you through the course of any situation with essential tools, safety, and peace of mind for you and your loved ones.</p>
+    <div id="hero">
+        <h2>Learn First Aid to Save Lives</h2>
+        <p>Your first step in emergency preparedness.</p>
+        <button style="background-color: #5C0011;"><a href="courses.html">Start Learning Now</a></button>
+    </div>
+    <p class="hp1">Take control of your safety and be ready for whatever comes your way with the Safekit Course. Whether you're preparing for emergencies, equipping yourself with essential skills, or ensuring peace of mind for your loved ones, our course is here to guide you every step of the way. Start your journey toward confidence and preparedness today—because safety is more than a choice; it's a way of life.</p>
+    
+    
+    </div>
+    </body>
+    <br><br><br><br>
+    <div id="footer">
+        <p>© 2025 SafeKit. All Rights Reserved.</p>
+    </div>
+    
+    
+    <script>
+    var d = new Date();
+        document.getElementById("d1").innerHTML =
+            d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() + "<br>";
+        var myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+            t = new Date();
+            document.getElementById("clock").innerHTML = t.toLocaleTimeString();
+        }
+        
+
+    </script>
+  
+</body>
+</html>
